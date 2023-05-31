@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Email Authentication</title>
+</head>
+
+<style>
+
+	body{
+		  font-family: monospace;
+		  font-weight: bold;
+         
+	}
+	
+	.container{
+    display: block;
+    margin: auto;
+	max-width: 500px;
+    border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+
+
+label{
+    display: block;
+    margin: auto;
+    padding: 1vh;
+
+}
+
+input[type="text"],input[type="email"], input[type="number"] {
+    display: block;
+    margin: 2% auto;
+    width: 85%;
+    height: 4vh;
+    max-height: 30px;
+    border-radius: 5px;
+    border: solid 2px #120A19;
+    background-color: #DBD6DF;
+}
+input[type="submit"]{
+    display:block;
+    margin: 4% auto;
+    width: 30%;
+    height: 4vh;
+    background-color: #120A19;
+    color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+input:hover {
+    transform: scale(1.05);
+}
+    
+	</style>
+<body style="background-color:rgb(31, 31, 31)">
+
+<div class="container">	
+
+	
+	<form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
+	<div class="col-sm-4">
+		<div class="form-group">
+	      <label for="email">Email</label>
+		  <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+		</div>
+		
+		<div class="form-group">
+	      <label for="password">Password</label>
+		  <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
+		</div>
+		<button type="button" id="login" name="login" class="btn btn-warning">Login</button>
+	</div><!-- end col -->
+	
+  </div><!--  end row -->		
+  </form>
+</div>
+
+
+	<script type="module">
+	    // Import the functions you need from the SDKs you need
+	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+	  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+	  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+	  // TODO: Add SDKs for Firebase products that you want to use
+	  // https://firebase.google.com/docs/web/setup#available-libraries
+
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+  apiKey: "AIzaSyBcc1GDBcOSV5mu5rUhoCLdFQQe3hXPtkg",
+  authDomain: "authentication-65095.firebaseapp.com",
+  projectId: "authentication-65095",
+  storageBucket: "authentication-65095.appspot.com",
+  messagingSenderId: "1079067459260",
+  appId: "1:1079067459260:web:5fe64952402d4d194e1ab9"
+};
+
+
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+	  const auth = getAuth();
+	  console.log(app);
+
+	  
+
+	
+
+	  //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+		  var email =  document.getElementById("login_email").value;
+		  var password = document.getElementById("login_password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert(user.email+" Login successfully!!!");
+            document.getElementById('logout').style.display = 'block';
+            window.location.href = 'products.html'
+		   
+       
+            
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });		  		  
+	  });
+	  //----- End
+
+	  //----- Logout code start	  
+	  document.getElementById("logout").addEventListener("click", function() {
+		  signOut(auth).then(() => {
+			  // Sign-out successful.
+			  console.log('Sign-out successful.');
+			  alert('Sign-out successful.');
+			  document.getElementById('logout').style.display = 'none';
+             
+			}).catch((error) => {
+			  // An error happened.
+			  console.log('An error happened.');
+			});		  		  
+	  });
+	  //----- End
+
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
+  />
+    <title>Insert Product</title>
+    
+    <style>
+
+body{
+      font-family: monospace;
+      font-weight: bold;
+    }
+
+   
+    
+    
+input:hover {
+    transform: scale(1.05);
+}
+
+    </style>
+
+</head>
+<body style="background-color:rgb(31, 31, 31)">
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color:rgb(17, 18, 17);">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <li class="logo"><img src="image/LOGO.png" width="100px" height="80px"></li>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">
+                          <button type="button" class="btn btn-outline-info">HOME</button>
+                      </a>
+                  </li>
+                
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.html">
+                          <button type="button" class="btn btn-outline-info">LOGIN</button>
+                      </a>
+                  </li>
+                  
+                  <li class="nav-item">
+                      <a class="nav-link" href="products.html">
+                          <button type="button" class="btn btn-outline-info">ARTMATS</button>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inventory.html">
+                        <button type="button" class="btn btn-outline-info">INVENTORY</button>
+                    </a>
+                </li>
+
+              </u>
+          </div>
+      </div>
+  </nav>
+    
+                   <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+        <section class="box1">
+          <div class="p-4" style="font-family:monospace; color: lightskyblue;background-color:rgb(17, 18, 17);">
+              <h2 style="text-align:center; color: rgb(40, 198, 230)"><b>ART MATERIALS? YOU CAN BORROW NOW!</b></h2>
+              <div class="text-center p-4"style="background-color:rgb(17, 18, 17);"></div>
+        <div class="container">
+          
+          <form>
+          
+            <div class="mb-3">
+              <label for="exampleInputStudentNo1" class="form-label">Name:</label>
+              <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" 
+                type="text"
+                class="form-control"
+                id="namebox"
+                
+              />
+            </div>
+
+            <div class="mb-3">
+                    <label for="exampleInputStudentNo1" class="form-label">Art Materials:</label>
+                  <select  id="artmats" style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" >
+                  
+                  <option value="Pencil">Pencil</option>
+                  <option value="ColorPencil">Color Pencil</option>
+                  <option value="Pens">Pens/Markers</option>
+                  <option value="Acrylic">Acrylic</option>
+                  <option value="WaterColor">Water Color</option>
+                  <option value="OilPaint">Oil Paint</option>
+                 
+                </select>
+              </div>
+
+            <div class="mb-3">
+                        <label for="exampleInputStudentNo1" class="form-label">Brand Name:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" 
+                          type="text"
+                          class="form-control"
+                          id="brand"
+                          
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputStudentNo1" class="form-label">Date Borrow:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" 
+                          type="text"
+                          class="form-control"
+                          id="date"
+                          
+                        />
+                      </div>
+
+              
+                      <div class="mb-3">
+                        <label for="exampleInputStudentNo1" class="form-label">Email Address:</label>
+                        <input style="color:#5068df; border-style: solid; border-color: rgb(246, 46, 229);background-color:rgb(17, 18, 17);" 
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          
+                        />
+                      </div>
+
+
+                      <button type="button" class="btn btn-outline-info" id="Subbtn">SUBMIT</button>
+                      
+                    </div>
+                       
+        </form>
+        </section>
+        </div>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  </style>
+
+        <!--Product Image-->
+        <br>
+        <h1 style="text-align:center; color: rgb(241, 41, 164);font-family: monospace; letter-spacing: 2px; font-weight: bold;">Art Materials</h1>
+        <br/>
+         
+        <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Pencil</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/pencilbuddies.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/pandafly.jpg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/dyvicl.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Color Pencil</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/Faber-castell.webp" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/CastleArt.webp" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/Arteza.webp" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Marker</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/copic.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/W&NPromarker.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/posca.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Acrylic</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/montmarte.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/berkeley.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/liquitex.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Water Color</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/wnwatercolor.jpeg" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/giorgione.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/sennelier.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+        <br>
+
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br>
+
+
+        <h2 style="text-align:center; color: #5085df;font-family: monospace; letter-spacing: 2px;">Oil Paint</h2>
+        <br/>
+
+        <div class="row">
+          <div class="column">
+            <img src="image/ohuhu.webp" alt="Snow" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/williamsburg.jpeg" alt="Forest" style="width:100%; height:100%">
+          </div>
+          <div class="column">
+            <img src="image/magicfy.jpeg" alt="Mountains" style="width:100%; height:100%">
+          </div>
+        </div>
+
+        <!--SCRIPT-->
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"
+      ></script>
+
+      <script type="module">
+         // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCd6ed6Y41SQpWatenqedavs5l3777Gbtg",
+  authDomain: "crud01-8d8d5.firebaseapp.com",
+  databaseURL: "https://crud01-8d8d5-default-rtdb.firebaseio.com",
+  projectId: "crud01-8d8d5",
+  storageBucket: "crud01-8d8d5.appspot.com",
+  messagingSenderId: "758867647149",
+  appId: "1:758867647149:web:ba9e828e3030d4ccf2c424"
+};
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase, ref, set, child, update, remove, get}
+        from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"
+
+        const db = getDatabase();
+
+         // references
+
+        var Name = document.getElementById("namebox");
+        var ArtMaterials = document.getElementById("artmats");
+        var BrandName = document.getElementById("brand");
+        var DateBorrow = document.getElementById("date");
+        var Email = document.getElementById("email");
+
+        var subBtn = document.getElementById("Subbtn")
+        
+       
+        // add data function
+
+        function SubmitData(){
+            set(ref(db, "TheStudent/"+ namebox.value),{
+                Name: namebox.value,
+                ArtMaterials: artmats.value,
+                BrandName: brand.value,
+                DateBorrow: date.value,
+                Email: email.value,
+                
+            })
+            
+            .then(()=>{
+                alert("data stored successfully");
+            })
+            .catch((error)=>{
+                alert("unsuccessful, error" + error)
+            });
+        }
+
+      
+        // Aasign event button
+        subBtn.addEventListener('click', SubmitData);
+       
+      </script>
+
+
+          <!-- Footer -->
+          <footer class="p-3 mb-2" style="background-color:rgb(17, 18, 17);">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+               
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                          
+                            <p style=" font-family: monospace; color: #50dfdb;">
+                              "If I could say it in words there would be no reason to paint.”
+
+                            </p>
+                        </div>
+                      
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <p style="font-family: monospace; color: #df50b4;">
+                                <a href="index.html" class="text-reset">Home</a>
+                            </p>
+                            <p style="font-family: monospace; color: #50dfda;">
+                                <a href="about.html" class="text-reset">About</a>
+                            </p>
+                            <p style="font-family: monospace; color: #df50b4;">
+                                <a href="creation.html" class="text-reset"> Creation</a>
+                            </p>
+                            <p style="font-family: monospace; color: #50dfda;">
+                                <a href="contact.html" class="text-reset">Contact</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4" style="font-family: monospace; color: #df50b4;">Contact</h6>
+                            <p style="font-family: monospace; color: #50dfdb;"><i class="fas fa-home me-3 text-secondary"></i> Manila, Philippines</p>
+                            <p style="font-family: monospace; color: #50dfdb;"><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+             <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+
+             <!-- Copyright -->
+          <div class="text-center p-4" style="font-family: monospace; color: rgb(61, 112, 232);background-color:rgb(17, 18, 17);">
+            Copyright&copy;:&hearts;2023.
+        </div>
+          <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+<br/>
+       
+<a class="link" href="https://www.kaleido.art/m_laris"> Kaleido_MLARIS </a>
+<style>
+  .link{
+    text-align: center;
+    display: block;
+    font-family: monospace;
+    color: #df50b4;
+  }
+</style>
+<br/>
+         <!--Border-->
+<div class="container-fluid"></div>
+<div class="border border-info border-top-9 border-1 h-500 w-500"></div>
+
+        <div class="credits">
+            <div class="text-center p-4" style="font-family: monospace; color:rgb(61, 112, 232);background-color:rgb(17, 18, 17);">Designed by: Kristle
+                Muzar
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Copyright -->
+
+
+  <!--Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" 
+integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
