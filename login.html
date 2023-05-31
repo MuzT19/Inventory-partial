@@ -14,6 +14,7 @@
 	body{
 		  font-family: monospace;
 		  font-weight: bold;
+		  background-color:rgb(31, 31, 31);
          
 	}
 	
@@ -62,8 +63,24 @@ input:hover {
 }
     
 	</style>
-<body style="background-color:rgb(31, 31, 31)">
-
+<body>
+	<div class="navbar navbar-default">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href=https://www.kaleido.art/m_laris">ArtMats</a>
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+		  </button>
+		</div>
+		<div class="navbar-collapse collapse"  >
+			<ul class="nav navbar-nav navbar-right">
+				 <li><a href="#" id="logout" style="display: none;">Log Out</a></li>
+			</ul>
+		</div>
+		</div>
+		<br>
 <div class="container">	
 
 	
@@ -108,7 +125,7 @@ input:hover {
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+ const analytics = getAnalytics(app);
 	  const auth = getAuth();
 	  console.log(app);
 
